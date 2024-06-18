@@ -254,13 +254,16 @@ body
             
             @media only screen and (max-width: 900px)
             {
-                justify-content: initial;
+                justify-content: space-around;
 
-                padding: 20px 0px;
+                padding: 10px 0px;
 
                 width: 100%;
     
                 border-radius: 0px;
+
+                background: none;
+                border-bottom: solid 1px;
             }
 
             div
@@ -271,8 +274,8 @@ body
                     
                     @media only screen and (max-width: 900px)
                     {
-                        width: 130px !important;
-                        margin: 0px 25px;
+                        width: 90px !important;
+                        margin: 0px;
                     }
                 }
 
@@ -299,6 +302,11 @@ body
                 &:nth-child(5)
                 {
                     width: 85px;
+                    
+                    @media only screen and (max-width: 900px)
+                    {
+                        width: 70px;
+                    }
                 }
 
                 &:nth-child(6)
@@ -313,6 +321,14 @@ body
                 }
             }
 
+            .assinantes
+            {
+                @media only screen and (max-width: 900px)
+                {
+                    width: 100px;
+                }
+            }
+
             .assinatura-filtro
             {
                 width: 200px; // largura do select
@@ -323,14 +339,14 @@ body
                     
                 @media only screen and (max-width: 900px)
                 {
-                    margin: 0px 10px;
+                    margin: 0px;
                 }
                 
                 .custom-select
                 {
                     position: relative;
                     display: inline-block;
-                    width: 100px; // largura do select
+                    width: 105px; // largura do select
                     height: 40px; // altura do select
                     overflow: hidden;
                     //border: 1px solid white;
@@ -348,6 +364,11 @@ body
                         border: 6px solid transparent;
                         border-color: #fff transparent transparent transparent;
                         z-index: -1;
+
+                        @media only screen and (max-width: 900px)
+                        {
+                            right: 0px;
+                        }
                     }
                     
                     // Estilo para o select dentro do custom-select
@@ -419,6 +440,21 @@ body
                 background: #ffffff10;
             }
 
+            @media only screen and (max-width: 900px)
+            {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                padding: 10px 0px;
+                border-radius: 10px;
+
+                .assinou, .nao-assinou
+                {
+                    width: 110px;
+                }
+            }
+
             div
             {
                 width: 180px;
@@ -428,6 +464,8 @@ body
                         display: flex;
                         justify-content: center;
                         align-items: center;
+
+                        width: 110px;
                     }
             }
 
@@ -470,6 +508,13 @@ body
                 &:nth-child(5)
                 {
                     width: 85px;
+
+                    @media only screen and (max-width: 900px)
+                    {
+                        width: 85px !important;
+
+                        text-align: right;
+                    }
                 }
 
                 &:nth-child(6)
@@ -508,21 +553,6 @@ body
         {
             align-items: initial;
             width: 100%;
-
-            .parlamentar
-            {
-                display: flex;
-                justify-content: initial;
-                align-items: center;
-                width: 100%;
-                padding: 20px 0px;
-                border-radius: 10px;
-
-                .assinou, .nao-assinou
-                {
-                    width: 110px;
-                }
-            }
         }
     }
 }

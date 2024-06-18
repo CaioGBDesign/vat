@@ -1,11 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Votação VAT</title>
+    
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <link rel="stylesheet/less" type="text/css" href="modal.less" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="logo-vat">
+        <img src="https://caiogbdesign.github.io/vat.votacao/movimento-vat.png" alt="">
+    </div>
     
+    <div class="titulos">
+        <div class="cont-titulos">
+            <div class="custom-select">
+                <select id="apoiador">
+                    <option value="">Assinou ?</option>
+                </select>
+            </div>
+            <div><span>Parlamentar</span></div>
+            <div class="desktop"><span>Email</span></div>
+            <div class="desktop"><span>Contato</span></div>
+            <div class="custom-select desktop">
+                <select id="partidos">
+                    <option value="">Partido</option>
+                </select>
+            </div>
+            <div class="custom-select desktop">
+                <select id="estados">
+                    <option value="">Estado</option>
+                </select>
+            </div>
+        </div>
+    </div>   
+    
+    <div id="parlamentares-list"></div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script-load-json.js" ></script>
+
+    <!-- Less -->
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
 </body>
 </html>

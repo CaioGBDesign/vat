@@ -82,7 +82,7 @@ function displayData(filteredData) {
                              <p>${item.parlamentar}</p>
                              <p class="desktop">${item.email}</p>
                              <p class="desktop">${item.telefone}</p>
-                             <p class="desktop">${item.partido}</p>
+                             <p>${item.partido}</p>
                              <p class="desktop">${item.estado}</p>`;
             // Adicionar evento apenas se for dispositivo móvel
             if (isMobile) {
@@ -94,12 +94,10 @@ function displayData(filteredData) {
 }
 
 function showModal(item) {
-    modalBody.innerHTML = `<p><strong>Assinou:</strong> ${item.assinou}</p>
-                           <p><strong>Parlamentar:</strong> ${item.parlamentar}</p>
-                           <p><strong>Email:</strong> ${item.email}</p>
-                           <p><strong>Telefone:</strong> ${item.telefone}</p>
-                           <p><strong>Partido:</strong> ${item.partido}</p>
-                           <p><strong>Estado:</strong> ${item.estado}</p>`;
+    modalBody.innerHTML = `<div><strong>Assinou:</strong> <p>${item.assinou}</p></div>
+                           <div><strong>Parlamentar:</strong> <p>${item.parlamentar}</p></div>
+                           <div><strong>Partido:</strong> <p>${item.partido}</p></div>
+                           <div><strong>Estado:</strong> <p>${item.estado}</p></div>`;
     modal.style.display = "block";
 }
 

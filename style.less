@@ -5,6 +5,9 @@ body
 
     background: black;
 
+    font-family: "Public Sans", sans-serif;
+    color: white;
+
     .logo-vat
     {
         width: 100%;
@@ -16,6 +19,314 @@ body
         img
         {
             width: 40%;
+
+            @media only screen and (max-width: 900px)
+            {
+                width: 100%;
+            }
+        }
+    }
+
+    .titulos
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+
+        .cont-titulos
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 80%;
+
+            padding: 20px 40px;
+
+            border-radius: 10px;
+
+            background: #ffffff20;
+
+            div
+            {
+                &:nth-child(1)
+                {
+                    width: 180px;
+                }
+
+                &:nth-child(2)
+                {
+                    width: 250px;
+                }
+
+                &:nth-child(3)
+                {
+                    width: 230px;
+                }
+
+                &:nth-child(4)
+                {
+                    width: 150px;
+                }
+
+                &:nth-child(5)
+                {
+                    width: 85px;
+                }
+
+                &:nth-child(6)
+                {
+                    width: 85px;
+                }
+
+                span
+                {
+                    font-weight: bold;
+                    font-size: 14px;                
+                }
+            }
+
+            .custom-select
+            {
+                position: relative;
+                display: inline-block;
+                width: 200px; // largura do select
+                height: 40px; // altura do select
+                overflow: hidden;
+                //border: 1px solid white;
+                border-radius: 4px;
+                
+                // Pseudo-elemento para a seta
+                &::after
+                {
+                    position: absolute;
+                    content: "";
+                    top: 18px;
+                    right: 10px;
+                    width: 0;
+                    height: 0;
+                    border: 6px solid transparent;
+                    border-color: #fff transparent transparent transparent;
+                    z-index: -1;
+                }
+                
+                // Estilo para o select dentro do custom-select
+                select
+                {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background-color: transparent; // Fundo transparente para que o pseudo-elemento seja visível
+                    appearance: none; // Remove estilos padrão do navegador
+                    color: white;
+                
+                    // Estilização opcional para o foco
+                    &:focus
+                    {
+                        outline: none;
+                        border-color: red; // Estilo de foco
+                    }
+
+                    option
+                    {
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 900px)
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: initial;
+            width: 100%;
+
+            .cont-titulos
+            {
+                width: 100%;
+
+                padding: 20px;
+
+                border-radius: 0px;
+
+                div
+                {
+                    &:nth-child(1)
+                    {
+                        width: 110px;
+                    }
+                }
+            }
+        }
+    }
+
+    #parlamentares-list
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+
+        .parlamentar
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            width: 80%;
+
+            padding: 20px 40px;
+
+            border-radius: 10px;
+
+            &:hover
+            {
+                background: #ffffff10;
+            }
+
+            div
+            {
+                width: 180px;
+            }
+
+            p
+            {
+                margin: 0;
+                padding: 0;
+
+                &:nth-child(1)
+                {
+                    width: 180px;
+                    line-height: 40px;
+                }
+
+                &:nth-child(2)
+                {
+                    width: 250px;
+                }
+
+                &:nth-child(3)
+                {
+                    width: 230px;
+                }
+
+                &:nth-child(4)
+                {
+                    width: 150px;
+                }
+
+                &:nth-child(5)
+                {
+                    width: 85px;
+                }
+
+                &:nth-child(6)
+                {
+                    width: 85px;
+
+                    text-align: right;
+                }
+            }
+
+            .nao-assinou
+            {
+                background: #EB757550;
+
+                text-align: center;
+
+                border-radius: 5px;
+            }
+
+            .assinou
+            {
+                background: #429B9450;
+
+                text-align: center;
+
+                border-radius: 5px;
+            }
+        }
+
+        .parlamentar-item
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            padding: 20px 40px;
+            border-radius: 10px;
+
+            &:hover
+            {
+                background: #ffffff10;
+            }
+
+            div
+            {
+                margin: 0;
+                padding: 0;
+
+                &:nth-child(1)
+                {
+                    width: 220px;
+                }
+
+                &:nth-child(2)
+                {
+                    width: 350px;
+                }
+
+                &:nth-child(3)
+                {
+                    width: 130px;
+                }
+
+                &:nth-child(4)
+                {
+                    width: 85px;
+                }
+
+                &:nth-child(5)
+                {
+                    width: 85px;
+
+                    text-align: right;
+                }
+            }
+        }
+
+        .nenhum-encontrado
+        {
+            padding: 50px;
+        }
+
+        @media only screen and (max-width: 900px)
+        {
+            align-items: initial;
+            width: 100%;
+
+            .parlamentar
+            {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+                border-radius: 10px;
+
+                div
+                {
+                    width: 110px;
+
+                    .assinou, .nao-assinou
+                    {
+                        width: 110px;
+                    }
+                }
+            }
         }
     }
 }

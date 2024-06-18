@@ -98,7 +98,7 @@ function showModal(item) {
                            <div><strong>Parlamentar:</strong> <p>${item.parlamentar}</p></div>
                            <div><strong>Partido:</strong> <p>${item.partido}</p></div>
                            <div><strong>Estado:</strong> <p>${item.estado}</p></div>`;
-    modal.style.display = "block";
+    modal.style.display = "flex";
 }
 
 // Fechar o modal quando o usuário clica no "X" ou fora dele

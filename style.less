@@ -3,26 +3,229 @@ body
     margin: 0;
     padding: 0;
 
-    background: black;
+    background: #191A1F;
 
     font-family: "Public Sans", sans-serif;
     color: white;
 
-    .logo-vat
+    .header
     {
-        width: 100%;
-
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 50px;
 
-        img
+        height: 350px;
+
+        @media only screen and (max-width: 900px)
         {
-            width: 40%;
+            flex-direction: column;
+
+            height: 490px;
+
+            gap: 20px;
+        }
+
+        .banner-logo
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 80px;
+
+            background: #ffffff05;
+
+            padding: 50px;
+
+            border-radius: 20px;
 
             @media only screen and (max-width: 900px)
             {
-                width: 100%;
+                gap: 20px;
+
+                padding: 0;
+
+                width: 95%;
+                height: 210px;
+
+                flex-direction: column;
+
+                p
+                {
+                    margin: 0;
+
+                    width: 270px;
+                }
+            }
+            
+            .slogan
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 20px;
+
+                @media only screen and (max-width: 900px)
+                {
+                    align-items: start;
+
+                    flex-direction: row;
+                    align-items: center;
+                }
+                
+                h1
+                {
+                    text-transform: uppercase;
+
+                    font-size: 25px;
+
+                    text-align: right;
+
+                    margin: 0;
+
+                    @media only screen and (max-width: 900px)
+                    {
+                        font-size: 20px;
+
+                        text-align: left;
+
+                        width: 170px;
+                    }
+                }
+
+                p
+                {
+                    font-size: 20px;
+                    width: 300px;
+
+                    text-align: right;
+
+                    margin: 0;
+
+                    @media only screen and (max-width: 900px)
+                    {
+                        width: 180px;
+
+                        font-size: 15px;
+
+                        text-align: left;
+                    }
+                }
+            }
+
+            .logo-vat
+            {
+                img
+                {
+                    width: 150px;
+                    height: 150px;
+
+                    border-radius: 150px;
+
+                    @media only screen and (max-width: 900px)
+                    {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+
+        .banner-creditos
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 80px;
+
+            background: #ffffff05;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            @media only screen and (max-width: 900px)
+            {
+                padding: 0;
+
+                width: 95%;
+                height: 240px;
+            }
+
+            .criador
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+
+                p
+                {
+                    margin: 0;
+                }
+
+                .rick
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    img
+                    {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    h1
+                    {
+                        font-size: 20px;
+                        text-align: left;
+
+                        margin: 0;
+
+                        width: 100px;
+                    }
+                }
+
+                .pix
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 5px;
+
+                    p
+                    {
+                        margin: 0;
+
+                        @media only screen and (max-width: 900px)
+                        {
+                            width: 260px;
+                        }
+                    }
+
+                    .copiar-pix
+                    {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+
+                        padding: 10px;
+
+                        background: #ffffff10;
+                        border-radius: 8px;
+
+                        img
+                        {
+                            width: 13px;
+                            height: 13px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -68,8 +271,8 @@ body
                     
                     @media only screen and (max-width: 900px)
                     {
-                        width: 110px;
-                        margin: 0px 35px;
+                        width: 130px !important;
+                        margin: 0px 25px;
                     }
                 }
 
@@ -110,59 +313,73 @@ body
                 }
             }
 
-            .custom-select
+            .assinatura-filtro
             {
-                position: relative;
-                display: inline-block;
                 width: 200px; // largura do select
-                height: 40px; // altura do select
-                overflow: hidden;
-                //border: 1px solid white;
-                border-radius: 4px;
-                
-                // Pseudo-elemento para a seta
-                &::after
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                    
+                @media only screen and (max-width: 900px)
                 {
-                    position: absolute;
-                    content: "";
-                    top: 18px;
-                    right: 10px;
-                    width: 0;
-                    height: 0;
-                    border: 6px solid transparent;
-                    border-color: #fff transparent transparent transparent;
-                    z-index: -1;
+                    margin: 0px 10px;
                 }
                 
-                // Estilo para o select dentro do custom-select
-                select
+                .custom-select
                 {
-                    width: 100%;
-                    height: 100%;
-                    border: none;
-                    background-color: transparent; // Fundo transparente para que o pseudo-elemento seja visível
-                    appearance: none; // Remove estilos padrão do navegador
-                    color: white;
-
-                    font-weight: bold;
-                    font-size: 14px;  
-
-                    @media only screen and (max-width: 900px)
+                    position: relative;
+                    display: inline-block;
+                    width: 100px; // largura do select
+                    height: 40px; // altura do select
+                    overflow: hidden;
+                    //border: 1px solid white;
+                    border-radius: 4px;
+                    
+                    // Pseudo-elemento para a seta
+                    &::after
                     {
-                        font-size: 14px;
+                        position: absolute;
+                        content: "";
+                        top: 18px;
+                        right: 10px;
+                        width: 0;
+                        height: 0;
+                        border: 6px solid transparent;
+                        border-color: #fff transparent transparent transparent;
+                        z-index: -1;
+                    }
+                    
+                    // Estilo para o select dentro do custom-select
+                    select
+                    {
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                        background-color: transparent; // Fundo transparente para que o pseudo-elemento seja visível
+                        appearance: none; // Remove estilos padrão do navegador
+                        color: white;
+
                         font-weight: bold;
-                    }
-                
-                    // Estilização opcional para o foco
-                    &:focus
-                    {
-                        outline: none;
-                        border-color: red; // Estilo de foco
-                    }
+                        font-size: 14px;  
 
-                    option
-                    {
-                        color: black;
+                        @media only screen and (max-width: 900px)
+                        {
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                    
+                        // Estilização opcional para o foco
+                        &:focus
+                        {
+                            outline: none;
+                            border-color: red; // Estilo de foco
+                        }
+
+                        option
+                        {
+                            color: black;
+                        }
                     }
                 }
             }
@@ -193,7 +410,7 @@ body
     
             width: 80%;
 
-            padding: 20px 40px;
+            padding: 10px 40px;
 
             border-radius: 10px;
 

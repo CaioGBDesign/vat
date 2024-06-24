@@ -78,7 +78,7 @@ function displayData(filteredData) {
         filteredData.forEach(item => {
             const div = document.createElement('div');
             div.className = 'parlamentar';
-            div.innerHTML = `<div><p class="${item.assinou === 'Assinou' ? 'assinou' : 'nao-assinou'}">${item.assinou}</p></div>
+            div.innerHTML = `<div><p class="${item.assinou === 'Sim' ? 'assinou' : 'nao-assinou'}">${item.assinou}</p></div>
                              <p>${item.parlamentar}</p>
                              <p class="desktop">${item.email}</p>
                              <p class="desktop">${item.telefone}</p>

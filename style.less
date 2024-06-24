@@ -3,7 +3,7 @@ body
     margin: 0;
     padding: 0;
 
-    background: #191A1F;
+    background: #2e3438;
 
     font-family: "Public Sans", sans-serif;
     color: white;
@@ -25,7 +25,7 @@ body
 
             gap: 0px;
 
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .banner-logo
@@ -36,11 +36,14 @@ body
 
             gap: 80px;
 
-            //background: #ffffff05;
+            background: #333c40;
 
             padding: 50px;
 
             border-radius: 20px;
+            border: 1px solid #555b5e;
+
+            width: 77%;
 
             p
             {
@@ -65,14 +68,12 @@ body
             {
                 gap: 20px;
 
-                padding: 0;
+                padding: 10px;
 
-                width: 95%;
+                width: 90%;
                 height: 210px;
 
                 flex-direction: column;
-
-                background: #ffffff05;
 
                 p
                 {
@@ -232,329 +233,344 @@ body
         }
     }
 
-    .titulos
+    section
     {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
 
-        width: 100%;
-
-        .cont-titulos
-        {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            width: 80%;
-
-            padding: 20px 40px;
-
-            border-radius: 10px;
-
-            background: #ffffff20;
-            
-            @media only screen and (max-width: 900px)
-            {
-                justify-content: space-around;
-
-                padding: 10px 0px;
-
-                width: 100%;
-    
-                border-radius: 0px;
-
-                background: none;
-                border-bottom: solid 1px;
-            }
-
-            div
-            {
-                &:nth-child(1)
-                {
-                    width: 180px;
-                    
-                    @media only screen and (max-width: 900px)
-                    {
-                        width: 90px !important;
-                        margin: 0px;
-                    }
-                }
-
-                &:nth-child(2)
-                {
-                    width: 250px;
-                    
-                    @media only screen and (max-width: 900px)
-                    {
-                        width: 110px;
-                    }
-                }
-
-                &:nth-child(3)
-                {
-                    width: 230px;
-                }
-
-                &:nth-child(4)
-                {
-                    width: 150px;
-                }
-
-                &:nth-child(5)
-                {
-                    width: 85px;
-                    
-                    @media only screen and (max-width: 900px)
-                    {
-                        width: 70px;
-                    }
-                }
-
-                &:nth-child(6)
-                {
-                    width: 85px;
-                }
-
-                span
-                {
-                    font-weight: bold;
-                    font-size: 14px;                
-                }
-            }
-
-            .assinantes
-            {
-                @media only screen and (max-width: 900px)
-                {
-                    width: 100px;
-                }
-            }
-
-            .assinatura-filtro
-            {
-                width: 200px; // largura do select
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                    
-                @media only screen and (max-width: 900px)
-                {
-                    margin: 0px;
-                }
-                
-                .custom-select
-                {
-                    position: relative;
-                    display: inline-block;
-                    width: 105px; // largura do select
-                    height: 40px; // altura do select
-                    overflow: hidden;
-                    //border: 1px solid white;
-                    border-radius: 4px;
-                    
-                    // Pseudo-elemento para a seta
-                    &::after
-                    {
-                        position: absolute;
-                        content: "";
-                        top: 18px;
-                        right: 10px;
-                        width: 0;
-                        height: 0;
-                        border: 6px solid transparent;
-                        border-color: #fff transparent transparent transparent;
-                        z-index: -1;
-
-                        @media only screen and (max-width: 900px)
-                        {
-                            right: 0px;
-                        }
-                    }
-                    
-                    // Estilo para o select dentro do custom-select
-                    select
-                    {
-                        width: 100%;
-                        height: 100%;
-                        border: none;
-                        background-color: transparent; // Fundo transparente para que o pseudo-elemento seja visível
-                        appearance: none; // Remove estilos padrão do navegador
-                        color: white;
-
-                        font-weight: bold;
-                        font-size: 14px;  
-
-                        @media only screen and (max-width: 900px)
-                        {
-                            font-size: 14px;
-                            font-weight: bold;
-                        }
-                    
-                        // Estilização opcional para o foco
-                        &:focus
-                        {
-                            outline: none;
-                            border-color: red; // Estilo de foco
-                        }
-
-                        option
-                        {
-                            color: black;
-                        }
-                    }
-                }
-            }
-        }
-
-        @media only screen and (max-width: 900px)
+        .cont-infos
         {
             display: flex;
             flex-direction: column;
-            align-items: initial;
-            width: 100%;
-        }
-    }
-
-    #parlamentares-list
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        width: 100%;
-
-        .parlamentar
-        {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-    
+            gap: 20px;
+
+            background: #333c40;
+            border: 1px solid rgb(85, 91, 94);
+            border-radius: 20px;
+
             width: 80%;
 
-            padding: 10px 40px;
-
-            border-radius: 10px;
-
-            &:hover
-            {
-                background: #ffffff10;
-            }
-
+            padding: 30px;
+                    
             @media only screen and (max-width: 900px)
             {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                width: 100%;
-                padding: 10px 0px;
-                border-radius: 10px;
+                gap: 0px;
 
-                .assinou, .nao-assinou
-                {
-                    width: 110px;
-                }
+                width: 90%;
+
+                padding: 10px;
             }
 
-            div
+            .titulos
             {
-                width: 180px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                width: 100%;
+
+                .cont-titulos
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 100%;
                     
                     @media only screen and (max-width: 900px)
                     {
+                        justify-content: space-around;
+
+                        padding: 10px 0px;
+
+                        width: 100%;
+            
+                        border-radius: 0px;
+
+                        background: none;
+                    }
+
+                    div
+                    {
+                        &:nth-child(1)
+                        {
+                            width: 70px !important;
+                            
+                            @media only screen and (max-width: 900px)
+                            {
+                                width: 60px;
+                                margin: 0px;
+                            }
+                        }
+
+                        &:nth-child(2)
+                        {
+                            width: 250px;
+                            
+                            @media only screen and (max-width: 900px)
+                            {
+                                width: 110px;
+                            }
+                        }
+
+                        &:nth-child(3)
+                        {
+                            width: 230px;
+                        }
+
+                        &:nth-child(4)
+                        {
+                            width: 150px;
+                        }
+
+                        &:nth-child(5)
+                        {
+                            width: 85px;
+                            justify-content: start;
+                            
+                            @media only screen and (max-width: 900px)
+                            {
+                                width: 100px;
+                            }
+                        }
+
+                        &:nth-child(6)
+                        {
+                            width: 85px;
+                            justify-content: end;
+                        }
+
+                        span
+                        {
+                            font-weight: bold;
+                            font-size: 14px;                
+                        }
+                    }
+
+                    .assinantes
+                    {
+                        @media only screen and (max-width: 900px)
+                        {
+                            width: 100px;
+                        }
+                    }
+
+                    .assinatura-filtro
+                    {
+                        width: 200px; // largura do select
+
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                            
+                        @media only screen and (max-width: 900px)
+                        {
+                            margin: 0px;
+                        }
+                        
+                        .custom-select
+                        {
+                            width: 105px;
+                            height: 40px;
+                            border-radius: 4px;
+                            
+                            // Estilo para o select dentro do custom-select
+                            select
+                            {
+                                height: 100%;
+                                border: none;
+                                background-color: transparent; // Fundo transparente para que o pseudo-elemento seja visível
+                                color: white;
 
-                        width: 110px;
+                                font-weight: bold;
+                                font-size: 14px;  
+
+                                @media only screen and (max-width: 900px)
+                                {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                }
+                            
+                                // Estilização opcional para o foco
+                                &:focus
+                                {
+                                    outline: none;
+                                    border-color: red; // Estilo de foco
+                                }
+
+                                option
+                                {
+                                    color: black;
+                                }
+                            }
+                        }
                     }
+                }
+
+                @media only screen and (max-width: 900px)
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: initial;
+                    width: 100%;
+                }
             }
 
-            p
+            hr
             {
-                margin: 0;
-                padding: 0;
+                border-right: none;
+                border-bottom: none;
+                border-left: none;
+                border-image: initial;
+                border-top: 1px solid rgb(86, 92, 95);
+                margin: 8px 0px;
 
-                &:nth-child(1)
+                width: 100%;
+            }
+
+            #parlamentares-list
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                width: 100%;
+
+                .parlamentar
                 {
-                    width: 180px;
-                    line-height: 40px;
-                    
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    padding: 0px 30px;
+            
+                    width: 100%;
+                    height: 50px;
+
+                    &:hover
+                    {
+                        background: #ffffff10;
+                    }
+
                     @media only screen and (max-width: 900px)
                     {
-                        width: 110px;
-                    }
-                }
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+                        padding: 10px 0px;
+                        border-radius: 10px;
 
-                &:nth-child(2)
-                {
-                    width: 250px;
-                    
-                    @media only screen and (max-width: 900px)
+                        .assinou, .nao-assinou
+                        {
+                            width: 70px;
+                        }
+                    }
+
+                    div
                     {
-                        width: 110px !important;
+                        width: 70px;
+
+                        display: flex;
+                        justify-content: center;
+                            
+                            @media only screen and (max-width: 900px)
+                            {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                width: 70px;
+                            }
                     }
-                }
 
-                &:nth-child(3)
-                {
-                    width: 230px;
-                }
-
-                &:nth-child(4)
-                {
-                    width: 150px;
-                }
-
-                &:nth-child(5)
-                {
-                    width: 85px;
-
-                    @media only screen and (max-width: 900px)
+                    p
                     {
-                        width: 85px !important;
+                        margin: 0;
+                        padding: 0;
 
-                        text-align: right;
+                        &:nth-child(1)
+                        {
+                            width: 70px;
+                            line-height: 30px;
+                            
+                            @media only screen and (max-width: 900px)
+                            {
+                                width: 70px;
+                            }
+                        }
+
+                        &:nth-child(2)
+                        {
+                            width: 250px;
+                            
+                            @media only screen and (max-width: 900px)
+                            {
+                                width: 110px !important;
+                            }
+                        }
+
+                        &:nth-child(3)
+                        {
+                            width: 230px;
+                        }
+
+                        &:nth-child(4)
+                        {
+                            width: 150px;
+                        }
+
+                        &:nth-child(5)
+                        {
+                            width: 85px;
+
+                            @media only screen and (max-width: 900px)
+                            {
+                                width: 85px !important;
+
+                                text-align: right;
+                            }
+                        }
+
+                        &:nth-child(6)
+                        {
+                            width: 85px;
+
+                            text-align: right;
+                        }
+                    }
+
+                    .nao-assinou
+                    {
+                        background: #EB757520;
+
+                        text-align: center;
+
+                        border-radius: 5px;
+                    }
+
+                    .assinou
+                    {
+                        background: #429B9420;
+
+                        text-align: center;
+
+                        border-radius: 5px;
                     }
                 }
 
-                &:nth-child(6)
+                .nenhum-encontrado
                 {
-                    width: 85px;
+                    padding: 50px;
+                }
 
-                    text-align: right;
+                @media only screen and (max-width: 900px)
+                {
+                    align-items: initial;
+                    width: 100%;
                 }
             }
-
-            .nao-assinou
-            {
-                background: #EB757550;
-
-                text-align: center;
-
-                border-radius: 5px;
-            }
-
-            .assinou
-            {
-                background: #429B9450;
-
-                text-align: center;
-
-                border-radius: 5px;
-            }
-        }
-
-        .nenhum-encontrado
-        {
-            padding: 50px;
-        }
-
-        @media only screen and (max-width: 900px)
-        {
-            align-items: initial;
-            width: 100%;
         }
     }
 }
